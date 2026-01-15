@@ -6,7 +6,8 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Products from "./pages/Products";
-
+import CreateProduct from "./pages/CreateProduct";
+import Product from "./pages/Product";
 // Import protected route
 import { ProtectedRoute } from "./components/ProtectedRoute";
 
@@ -28,6 +29,10 @@ const App = () => {
         <Link to="/products" className="hover:text-blue-500">
           Products
         </Link>
+        <Link to="/create-product" className="hover:text-blue-500">
+          Create Product
+        </Link>
+        <Link to="/product" className="hover:text-blue-500">Update_Product</Link>
       </nav>
 
       {/* Page Content */}
@@ -36,6 +41,9 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/create-product" element={<CreateProduct />} />
+          <Route path="/product" element={<Product />} />
+
           <Route
             path="/dashboard"
             element={
