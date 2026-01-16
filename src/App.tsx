@@ -10,6 +10,7 @@ import CreateProduct from "./pages/CreateProduct";
 import Product from "./pages/Product";
 // Import protected route
 import { ProtectedRoute } from "./components/ProtectedRoute";
+import Product_delete from "./pages/Product_delete";
 
 const App = () => {
   return (
@@ -33,7 +34,9 @@ const App = () => {
           Create Product
         </Link>
         <Link to="/product" className="hover:text-blue-500">Update_Product</Link>
+        <Link to="/Product_delete" className="hover:text-blue-500">Delete_Product</Link>
       </nav>
+      
 
       {/* Page Content */}
       <div className="pt-20">
@@ -43,7 +46,7 @@ const App = () => {
           <Route path="/products" element={<Products />} />
           <Route path="/create-product" element={<CreateProduct />} />
           <Route path="/product" element={<Product />} />
-
+          <Route path="/product_delete" element={<Product_delete />} />
           <Route
             path="/dashboard"
             element={
